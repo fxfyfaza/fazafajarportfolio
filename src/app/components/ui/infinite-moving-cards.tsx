@@ -1,15 +1,7 @@
-"use client";
-
-import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
-export const InfiniteMovingCards = ({
-  items,
-  direction = "left",
-  speed = "fast",
-  pauseOnHover = true,
-  className,
-}: {
+interface InfiniteMovingCardsProps {
   items: {
     src: string;
     alt: string;
@@ -18,6 +10,16 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  renderItem: (item: { src: string; alt: string; }) => JSX.Element; // Add this line
+}
+
+export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
+  items,
+  direction = "left",
+  speed = "fast",
+  pauseOnHover = true,
+  className,
+  renderItem, // Add this line
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -99,11 +101,7 @@ export const InfiniteMovingCards = ({
             key={idx}
           >
             <div className="relative w-full h-full flex items-center justify-center">
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="max-w-[100%] max-h-[100%] object-contain"
-              />
+              {renderItem(item)} {/* Use renderItem here */}
             </div>
           </li>
         ))}

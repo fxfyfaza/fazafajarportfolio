@@ -3,7 +3,6 @@
 import React from "react";
 import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 
-// Array of technology logos
 const techLogos = [
   { src: "../img/JS.svg", alt: "JavaScript" },
   { src: "../img/typescript.svg", alt: "TypeScript" },
