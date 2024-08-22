@@ -10,7 +10,7 @@ const Home: React.FC = () => {
 
   return (
     <BackgroundBeamsWithCollision>
-    <div className="relative flex items-center justify-center min-h-screen w-full text-white">
+    <div className='relative flex items-center justify-center min-h-screen w-full text-white'>
 
 
       <div className="absolute inset-0 flex items-center justify-center">
