@@ -25,10 +25,10 @@ const Home: React.FC = () => {
             <div className="bg-gray-800 rounded-md p-8 shadow-md text-center">
               <header className="mb-4">
                 <h1 className="text-3xl font-bold">Welcome to My portfolio web! <br /><br />
-                I'm an undergrad in Physics Engineering.
+                Im an undergrad in Physics Engineering.
                   My love for tech started as a kid, watching my cousin "Ngoprek" anything.
                    He sparked my curiosity, which has stuck with me ever since.
-                    Want to know more? Hit me up! (Quick replies when I'm active xD).</h1>
+                    Want to know more? Hit me up! (Quick replies when Im active xD).</h1>
               </header>
               <main className="mb-2">
               </main>
